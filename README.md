@@ -1,27 +1,29 @@
-# LivrosAngular
+# Sistema de Gerenciamento de Livros com Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+## 📚 Sobre o Projeto
+Bem-vindo ao sistema de gerenciamento de livros, um projeto prático desenvolvido com Angular. Este repositório apresenta a implementação de uma aplicação web moderna focada em gerenciar livros. Utilizando Angular, Angular Router, e Bootstrap, este projeto visa oferecer uma experiência interativa na gestão de livros, combinando um design responsivo com funcionalidades dinâmicas.
 
-## Development server
+## 🎯 Objetivos da Prática
+O principal objetivo deste projeto é desenvolver habilidades em:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Desenvolvimento de Aplicações Web com Angular:** Utilizando componentes Angular para criar uma aplicação web interativa e dinâmica.
+- **Navegação e Rotas com Angular Router:** Implementando navegação entre diferentes partes da aplicação de forma eficiente.
+- **Estilização com Bootstrap:** Aplicando o framework Bootstrap para garantir um design responsivo e moderno.
+- **Gestão de Estado:** Gerenciando o estado da aplicação para refletir as mudanças de forma reativa.
 
-## Code scaffolding
+## 🌐 Recursos do Sistema
+- **Design Responsivo:** Adaptável para diferentes tamanhos de tela, assegurando uma ótima visualização tanto em dispositivos móveis quanto em desktops.
+- **Interface Intuitiva:** Facilita a navegação e o gerenciamento de livros, com uma disposição clara e atraente das informações.
+- **Cadastro e Listagem de Livros:** Permite cadastrar novos livros e visualizar a lista de livros cadastrados.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🛠️ Tecnologias Utilizadas
+- **Angular:** Para a construção da interface do usuário com componentes reutilizáveis.
+- **Angular Router:** Para o gerenciamento de navegação e rotas na aplicação.
+- **Bootstrap:** Framework CSS para desenvolver componentes responsivos e estilizados de maneira ágil.
+- **ngx-toastr:** Para exibir notificações e feedbacks interativos ao usuário.
 
-## Build
+## 🔍 Visualização do Projeto
+Para visualizar o sistema, você pode acessar o [https://livros-angular-estacio.netlify.app/] ou clonar o repositório e executar `ng serve` para rodar localmente.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 📚 Aprendizado e Desenvolvimento
+Este projeto é uma demonstração prática dos conhecimentos adquiridos em desenvolvimento web com Angular, evidenciando a aplicação de conceitos importantes como componentização, rotas, gestão de estado e estilização.
