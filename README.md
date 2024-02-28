@@ -1,14 +1,14 @@
 # Sistema de Gerenciamento de Livros com Angular
 
 ## 📚 Sobre o Projeto
-Bem-vindo ao sistema de gerenciamento de livros, um projeto prático desenvolvido com Angular. Este repositório apresenta a implementação de uma aplicação web moderna focada em gerenciar livros. Utilizando Angular, Angular Router, e Bootstrap, este projeto visa oferecer uma experiência interativa na gestão de livros, combinando um design responsivo com funcionalidades dinâmicas.
+Bem-vindo ao sistema de gerenciamento de livros, um projeto prático desenvolvido com Angular. Este repositório apresenta a implementação de uma aplicação web moderna focada em gerenciar livros. Utilizando Angular, Angular Router e Angular Material, este projeto visa oferecer uma experiência interativa na gestão de livros, combinando um design responsivo com funcionalidades dinâmicas.
 
 ## 🎯 Objetivos da Prática
 O principal objetivo deste projeto é desenvolver habilidades em:
 
 - **Desenvolvimento de Aplicações Web com Angular:** Utilizando componentes Angular para criar uma aplicação web interativa e dinâmica.
 - **Navegação e Rotas com Angular Router:** Implementando navegação entre diferentes partes da aplicação de forma eficiente.
-- **Estilização com Bootstrap:** Aplicando o framework Bootstrap para garantir um design responsivo e moderno.
+- **Estilização com Angular Material:** Aplicando o conjunto de componentes do Angular Material para garantir um design responsivo e moderno.
 - **Gestão de Estado:** Gerenciando o estado da aplicação para refletir as mudanças de forma reativa.
 
 ## 🌐 Recursos do Sistema
@@ -19,7 +19,7 @@ O principal objetivo deste projeto é desenvolver habilidades em:
 ## 🛠️ Tecnologias Utilizadas
 - **Angular:** Para a construção da interface do usuário com componentes reutilizáveis.
 - **Angular Router:** Para o gerenciamento de navegação e rotas na aplicação.
-- **Bootstrap:** Framework CSS para desenvolver componentes responsivos e estilizados de maneira ágil.
+- **Angular Material:** Conjunto de componentes do Angular para desenvolver uma interface estilizada e responsiva.
 - **ngx-toastr:** Para exibir notificações e feedbacks interativos ao usuário.
 
 ## 🔍 Visualização do Projeto
