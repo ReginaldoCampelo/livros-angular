@@ -3,6 +3,43 @@
   height: 100%;
 }
 
-.sidenav-content {
+.logo-container {
+  padding: 24px 16px;
+  text-align: center;
+}
 
+.logo-container img {
+  max-width: 150px;
+  height: auto;
+}
+
+.menu-links {
+  margin-top: 24px;
+}
+
+.menu-links a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 12px 24px;
+}
+
+.menu-icon {
+  margin-right: 8px;
+}
+
+.menu-text {
+  flex-grow: 1;
+}
+
+.menu-links a:hover {
+  background-color: #f0f0f0;
+}
+
+.toolbar-title {
+  flex-grow: 1;
+  margin-left: 16px;
+  font-size: 20px;
+  font-weight: bold;
 }
