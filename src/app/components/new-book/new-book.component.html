@@ -1,1 +1,66 @@
-<p>new-book works!</p>
+<div class="container">
+  <h2>Cadastro de Livro</h2>
+  <form [formGroup]="livroForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Título</mat-label>
+      <input
+        matInput
+        formControlName="titulo"
+        placeholder="Título"
+        maxlength="25"
+      />
+      <mat-icon matSuffix>title</mat-icon>
+      <mat-error *ngIf="isInvalidAndTouched('titulo')"
+        >Título é obrigatório</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Resumo</mat-label>
+      <textarea
+        matInput
+        formControlName="resumo"
+        placeholder="Resumo"
+        maxlength="250"
+        (input)="updateResumoCount($event)"
+      ></textarea>
+      <mat-hint align="end"
+        >{{ livroForm.get("resumo")?.value?.length }}/{{
+          limitString
+        }}</mat-hint
+      >
+      <mat-icon matSuffix>description</mat-icon>
+      <mat-error *ngIf="isInvalidAndTouched('resumo')"
+        >Resumo é obrigatório</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Editora</mat-label>
+      <mat-select formControlName="editora" placeholder="Editora">
+        <mat-option *ngFor="let editora of editoras" [value]="editora">{{
+          editora
+        }}</mat-option>
+      </mat-select>
+      <mat-icon matSuffix>business</mat-icon>
+      <mat-error *ngIf="isInvalidAndTouched('editora')"
+        >Editora é obrigatória</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Autores</mat-label>
+      <mat-select formControlName="autores" placeholder="Autores" multiple>
+        <mat-option *ngFor="let autor of autores" [value]="autor">{{
+          autor
+        }}</mat-option>
+      </mat-select>
+      <mat-icon matSuffix>people</mat-icon>
+      <mat-error *ngIf="isInvalidAndTouched('autores')"
+        >Autores são obrigatórios</mat-error
+      >
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" class="full-width">
+      <mat-icon>save</mat-icon>
+      Cadastrar
+    </button>
+  </form>
+</div>
