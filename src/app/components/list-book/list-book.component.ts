@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -10,10 +10,9 @@ import { BookService } from 'src/app/services/book.service';
   templateUrl: './list-book.component.html',
   styleUrls: ['./list-book.component.scss'],
 })
-export class ListBookComponent {
-  livros: Book[] = [];
+export class ListBookComponent implements OnInit {
   displayedColumns: string[] = ['titulo', 'resumo', 'editora', 'autores'];
-  dataSource = new MatTableDataSource<Book>(this.livros);
+  dataSource = new MatTableDataSource<Book>([]);
   isLoading = true;
 
   @ViewChild(MatSort) sort!: MatSort;
@@ -21,13 +20,30 @@ export class ListBookComponent {
 
   constructor(private dataService: BookService) {}
 
-  ngAfterViewInit() {
-    this.dataService.getBooks().subscribe((livros: Book[]) => {
-      this.livros = livros;
-      this.dataSource.data = this.livros;
-      this.dataSource.sort = this.sort;
-      this.dataSource.paginator = this.paginator;
-      this.isLoading = false;
+  ngOnInit() {
+    this.loadBooks();
+  }
+
+  loadBooks() {
+    this.dataService.books$.subscribe((livros: Book[]) => {
+      setTimeout(() => {
+        this.dataSource.data = livros;
+        this.dataSource.sort = this.sort;
+        this.updatePaginator();
+        this.isLoading = false;
+      }, 3000);
     });
+  }
+
+  updatePaginator() {
+    this.dataSource.paginator = this.paginator;
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.length = this.dataSource.filteredData.length;
+    }
+  }
+
+  onPageChange(event: any) {
+    this.paginator.pageIndex = event.pageIndex;
+    this.paginator.pageSize = event.pageSize;
   }
 }

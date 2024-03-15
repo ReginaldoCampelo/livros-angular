@@ -1,0 +1,15 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 64px);
+}
+
+.table-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mat-spinner {
+  margin-bottom: 20px;
+}

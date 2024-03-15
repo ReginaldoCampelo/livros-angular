@@ -1,36 +1,36 @@
-<mat-table [dataSource]="livros" matSort>
+<div class="loading-container" *ngIf="isLoading">
+  <mat-spinner diameter="50"></mat-spinner>
+</div>
 
-  <!-- Título da coluna -->
+<mat-table [dataSource]="dataSource" matSort *ngIf="!isLoading">
   <ng-container matColumnDef="titulo">
     <mat-header-cell *matHeaderCellDef mat-sort-header>Título</mat-header-cell>
     <mat-cell *matCellDef="let livro">{{ livro.titulo }}</mat-cell>
   </ng-container>
 
-  <!-- Resumo da coluna -->
   <ng-container matColumnDef="resumo">
     <mat-header-cell *matHeaderCellDef>Resumo</mat-header-cell>
     <mat-cell *matCellDef="let livro">{{ livro.resumo }}</mat-cell>
   </ng-container>
 
-  <!-- Editora da coluna -->
   <ng-container matColumnDef="editora">
     <mat-header-cell *matHeaderCellDef>Editora</mat-header-cell>
     <mat-cell *matCellDef="let livro">{{ livro.editora }}</mat-cell>
   </ng-container>
 
-  <!-- Autores da coluna -->
   <ng-container matColumnDef="autores">
     <mat-header-cell *matHeaderCellDef>Autores</mat-header-cell>
-    <mat-cell *matCellDef="let livro">{{ livro.autores.join(', ') }}</mat-cell>
+    <mat-cell *matCellDef="let livro">{{ livro.autores.join(", ") }}</mat-cell>
   </ng-container>
 
-  <!-- Linhas da tabela -->
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
 </mat-table>
 
-<!-- Paginação -->
-<mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
-
-<!-- Indicador de carregamento -->
-<mat-spinner *ngIf="isLoading" diameter="50"></mat-spinner>
+<mat-paginator
+  [length]="dataSource.data.length"
+  [pageSize]="5"
+  [pageSizeOptions]="[5, 10, 25, 100]"
+  (page)="onPageChange($event)"
+  showFirstLastButtons
+></mat-paginator>
