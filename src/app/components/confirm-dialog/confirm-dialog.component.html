@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>
+  <mat-icon>help_outline</mat-icon>
+  Confirmação
+</h1>
+<div mat-dialog-content>
+  <p>{{ data }}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button color="warn" (click)="onNoClick()">
+    <mat-icon>cancel</mat-icon>
+    Cancelar
+  </button>
+  <button mat-button color="primary" (click)="onYesClick()" cdkFocusInitial>
+    <mat-icon>check_circle</mat-icon>
+    Confirmar
+  </button>
+</div>
