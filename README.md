@@ -20,7 +20,6 @@ O principal objetivo deste projeto é desenvolver habilidades em:
 - **Angular:** Para a construção da interface do usuário com componentes reutilizáveis.
 - **Angular Router:** Para o gerenciamento de navegação e rotas na aplicação.
 - **Angular Material:** Conjunto de componentes do Angular para desenvolver uma interface estilizada e responsiva.
-- **ngx-toastr:** Para exibir notificações e feedbacks interativos ao usuário.
 
 ## 🔍 Visualização do Projeto
 Para visualizar o sistema, você pode acessar o [https://livros-angular-estacio.netlify.app/] ou clonar o repositório e executar `ng serve` para rodar localmente.
